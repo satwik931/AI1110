@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Playing Random Playlist Report}
+\author{SATTIRAJU R N S SAI SATWIK}
+\maketitle
+
+\section{Introduction}
+In this report, we will discuss the implementation of a program that plays a random playlist using the VLC media player. The program utilizes the `os`, `vlc`, `numpy`, and `curses` modules to load audio tracks, shuffle them randomly, and provide key-based control for playback.
+
+\section{Code Description}
+The code is structured into a function named \texttt{play\_random\_playlist} which takes the path to the playlist directory as an input.
+
+\begin{enumerate}
+  \item Load all audio tracks from the specified playlist directory using the `os` module.
+  \item Shuffle the audio tracks randomly using the `numpy` module.
+  \item Create an instance of the VLC media player using the `vlc` module.
+  \item Initialize the `curses` module to enable key-based control in the terminal.
+  \item Play each audio track in the shuffled order and wait for key inputs to control playback.
+  \item Clean up and release resources after the playback is finished.
+\end{enumerate}
+
+\section{Implementation Details}
+The code uses various functions and libraries to achieve the desired functionality. It relies on the `os` module to interact with the file system, `vlc` module to handle media playback, `numpy` module for shuffling the tracks randomly, and `curses` module to capture key inputs during playback.
+
+The program loads the audio tracks from the specified playlist directory and shuffles them using `numpy`. It then sets up a VLC media player and iterates through the shuffled tracks, playing each track in the order. During playback, the program waits for key inputs using 'curses.getch()' and performs specific actions based on the pressed key. Pressing 'q' stops the playback, and pressing 'n' advances to the next randomly shuffled track.
+
+\section{Conclusion}
+The program successfully plays a random playlist of audio tracks using the VLC media player and provides key-based control for playback. It demonstrates the usage of various modules and functions to achieve the desired functionality.
+
+\end{document}
+
